@@ -1,0 +1,21 @@
+<div ng-if="!company_list">
+  CVR list not loaded
+</div>
+
+<div ng-if="company_list.response==true">
+  <div class="container">
+    <table class="table-hover">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Company CVR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="c in company_list.companies"><td>{{ c.name }}</td><td>{{ c.cvr }}</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- vi: set shiftwidth=2 tabstop=2 expandtab: :indentSize=2:tabSize=2:noTabs=true:-->

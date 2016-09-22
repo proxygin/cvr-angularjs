@@ -1,0 +1,26 @@
+<div ng-if="!details">
+  Connecting to CVR...
+</div>
+
+<div ng-if="details.response==true">
+  <span class="span-outer">
+    {{ details.company.name }}
+  </span>
+
+  <p>
+    <div>
+      CVR : {{ details.company.cvr }}
+    </div>
+    <div>
+      Address  : {{ details.company.address }}
+    </div>
+    <div>
+      Country : {{ details.company.country }}
+    </div>
+    <div>
+      Phone number : {{ details.company.phoneno }}
+    </div>
+  </p>
+</div>
+
+<!-- vi: set shiftwidth=2 tabstop=2 expandtab: :indentSize=2:tabSize=2:noTabs=true:-->
