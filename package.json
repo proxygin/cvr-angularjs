@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
                 "preinstall": "npm i typings -g",
-		"start": "npm run lite",
+		"start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
 		"lite": "lite-server",
 		"postinstall": "typings install",
 		"tsc": "tsc",
@@ -27,9 +27,7 @@
 		"systemjs": "0.19.27",
 		"zone.js": "^0.6.23",
 		"angular2-in-memory-web-api": "0.0.20",
-		"bootstrap": "^3.3.6"
-	},
-	"devDependencies": {
+		"bootstrap": "^3.3.6",
 		"concurrently": "^2.2.0",
 		"lite-server": "^2.2.2",
 		"typescript": "^2.0.2",
