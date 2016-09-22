@@ -2,6 +2,7 @@
 	"name": "cvr-angular",
 	"version": "1.0.0",
 	"scripts": {
+                "preinstall": "npm i typings -g",
 		"start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
 		"lite": "lite-server",
 		"postinstall": "typings install",
